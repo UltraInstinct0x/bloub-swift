@@ -1,0 +1,35 @@
+{
+  "name": "@hermes/avatar",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Live, deterministic bot avatar: a clockless morphing engine (ported from bloub, MIT) with an identity-derived look",
+  "license": "MIT",
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "default": "./dist/src/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "gen:golden": "npm run build && node dist/scripts/gen-golden.js"
+  },
+  "devDependencies": {
+    "@types/node": "^26.0.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.10"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

@@ -1,0 +1,327 @@
+{
+  "version": 1,
+  "generator": "ts/scripts/gen-golden.ts",
+  "note": "Look derived from a profile id. seed = fnv1a32(\"hermes-avatar/v1:\" + profileId). Numbers rounded to 1e-6. Any change here changes what bots look like.",
+  "cases": [
+    {
+      "profileId": "hermesbot",
+      "avatar": {
+        "profileId": "hermesbot",
+        "seed": 816786720,
+        "shape": "quatrefoil",
+        "palette": {
+          "hue": 266.071565,
+          "body": "#749cff",
+          "shadow": "#3d5389",
+          "eye": "#100800",
+          "oklch": {
+            "body": [
+              0.707341,
+              0.159687,
+              266.071565
+            ],
+            "shadow": [
+              0.449558,
+              0.093089,
+              266.071565
+            ],
+            "eye": [
+              0.142379,
+              0.043013,
+              81.811143
+            ]
+          }
+        },
+        "rest": {
+          "mood": "bright",
+          "expression": "attentif",
+          "transition": {
+            "calm": 0.029282,
+            "bright": 0.939495,
+            "amused": 0.031222
+          }
+        }
+      }
+    },
+    {
+      "profileId": "appdev",
+      "avatar": {
+        "profileId": "appdev",
+        "seed": 3886084835,
+        "shape": "blob",
+        "palette": {
+          "hue": 293.680622,
+          "body": "#9177db",
+          "shadow": "#655b87",
+          "eye": "#0c0c00",
+          "oklch": {
+            "body": [
+              0.63804,
+              0.146991,
+              293.680622
+            ],
+            "shadow": [
+              0.498982,
+              0.070299,
+              293.680622
+            ],
+            "eye": [
+              0.149934,
+              0.04181,
+              110.435412
+            ]
+          }
+        },
+        "rest": {
+          "mood": "bright",
+          "expression": "attentif",
+          "transition": {
+            "calm": 0.055711,
+            "bright": 0.91308,
+            "amused": 0.031209
+          }
+        }
+      }
+    },
+    {
+      "profileId": "health",
+      "avatar": {
+        "profileId": "health",
+        "seed": 3670824079,
+        "shape": "blob",
+        "palette": {
+          "hue": 209.853686,
+          "body": "#45b4c6",
+          "shadow": "#007584",
+          "eye": "#150503",
+          "oklch": {
+            "body": [
+              0.713718,
+              0.101915,
+              209.853686
+            ],
+            "shadow": [
+              0.516663,
+              0.108582,
+              209.853686
+            ],
+            "eye": [
+              0.144507,
+              0.033063,
+              34.740945
+            ]
+          }
+        },
+        "rest": {
+          "mood": "bright",
+          "expression": "attentif",
+          "transition": {
+            "calm": 0.086196,
+            "bright": 0.841512,
+            "amused": 0.072292
+          }
+        }
+      }
+    },
+    {
+      "profileId": "scout",
+      "avatar": {
+        "profileId": "scout",
+        "seed": 2191395333,
+        "shape": "lozenge",
+        "palette": {
+          "hue": 29.968036,
+          "body": "#e46e5d",
+          "shadow": "#964237",
+          "eye": "#091715",
+          "oklch": {
+            "body": [
+              0.674555,
+              0.150426,
+              29.968036
+            ],
+            "shadow": [
+              0.487892,
+              0.115433,
+              29.968036
+            ],
+            "eye": [
+              0.190112,
+              0.020079,
+              182.703068
+            ]
+          }
+        },
+        "rest": {
+          "mood": "calm",
+          "expression": "neutre",
+          "transition": {
+            "calm": 0.908151,
+            "bright": 0.058312,
+            "amused": 0.033537
+          }
+        }
+      }
+    },
+    {
+      "profileId": "goku",
+      "avatar": {
+        "profileId": "goku",
+        "seed": 1538979087,
+        "shape": "bean",
+        "palette": {
+          "hue": 306.750694,
+          "body": "#9b70c3",
+          "shadow": "#6b4c88",
+          "eye": "#061506",
+          "oklch": {
+            "body": [
+              0.622731,
+              0.129027,
+              306.750694
+            ],
+            "shadow": [
+              0.475833,
+              0.099616,
+              306.750694
+            ],
+            "eye": [
+              0.177704,
+              0.036763,
+              143.731532
+            ]
+          }
+        },
+        "rest": {
+          "mood": "amused",
+          "expression": "heureux",
+          "transition": {
+            "calm": 0.054615,
+            "bright": 0.06249,
+            "amused": 0.882894
+          }
+        }
+      }
+    },
+    {
+      "profileId": "retro",
+      "avatar": {
+        "profileId": "retro",
+        "seed": 2884969487,
+        "shape": "blob",
+        "palette": {
+          "hue": 172.732009,
+          "body": "#00b593",
+          "shadow": "#237762",
+          "eye": "#1a0203",
+          "oklch": {
+            "body": [
+              0.689993,
+              0.136473,
+              172.732009
+            ],
+            "shadow": [
+              0.512667,
+              0.085548,
+              172.732009
+            ],
+            "eye": [
+              0.1454,
+              0.049604,
+              22.158577
+            ]
+          }
+        },
+        "rest": {
+          "mood": "bright",
+          "expression": "attentif",
+          "transition": {
+            "calm": 0.086335,
+            "bright": 0.860976,
+            "amused": 0.052689
+          }
+        }
+      }
+    },
+    {
+      "profileId": "cron",
+      "avatar": {
+        "profileId": "cron",
+        "seed": 4240992393,
+        "shape": "orb",
+        "palette": {
+          "hue": 255.216567,
+          "body": "#5e9ded",
+          "shadow": "#345580",
+          "eye": "#1c1400",
+          "oklch": {
+            "body": [
+              0.688805,
+              0.135432,
+              255.216567
+            ],
+            "shadow": [
+              0.445391,
+              0.081374,
+              255.216567
+            ],
+            "eye": [
+              0.194967,
+              0.041402,
+              90.79381
+            ]
+          }
+        },
+        "rest": {
+          "mood": "bright",
+          "expression": "attentif",
+          "transition": {
+            "calm": 0.03859,
+            "bright": 0.913392,
+            "amused": 0.048019
+          }
+        }
+      }
+    },
+    {
+      "profileId": "paperclip",
+      "avatar": {
+        "profileId": "paperclip",
+        "seed": 991856919,
+        "shape": "blob",
+        "palette": {
+          "hue": 301.767367,
+          "body": "#aa8dd6",
+          "shadow": "#6c548f",
+          "eye": "#0b170b",
+          "oklch": {
+            "body": [
+              0.697176,
+              0.109164,
+              301.767367
+            ],
+            "shadow": [
+              0.494305,
+              0.095635,
+              301.767367
+            ],
+            "eye": [
+              0.187477,
+              0.028358,
+              144.095775
+            ]
+          }
+        },
+        "rest": {
+          "mood": "calm",
+          "expression": "neutre",
+          "transition": {
+            "calm": 0.924745,
+            "bright": 0.042685,
+            "amused": 0.032569
+          }
+        }
+      }
+    }
+  ]
+}

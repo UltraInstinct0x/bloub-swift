@@ -1,0 +1,51 @@
+name: ci
+
+# ubuntu-latest, not a self-hosted or third-party runner: this repository must be buildable by
+# anyone who clones it, and the task explicitly rules out blacksmith runners.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    working-directory: ts
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: ts/package-lock.json
+
+      - name: Install
+        run: npm ci
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Test
+        run: npm test
+
+      # The goldens are a checked-in contract with the Swift port. If the engine no longer
+      # reproduces them byte for byte, either the engine changed (and the diff must be reviewed
+      # as a change to what every bot looks like) or the files were hand-edited.
+      - name: Goldens are reproducible
+        run: |
+          npm run gen:golden
+          git diff --exit-code -- ../golden
+          test -z "$(git status --porcelain -- ../golden)"

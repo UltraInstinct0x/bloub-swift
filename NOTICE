@@ -1,0 +1,44 @@
+hermes-avatar
+=============
+
+This repository contains a TypeScript port of the bot-morphing engine from
+**bloub** — "An SVG recreation of the x.ai bot avatar", by Jérémy Perret —
+<https://github.com/jeremy-prt/bloub>, released under the MIT License.
+
+What is derived from bloub
+--------------------------
+
+The engine under `ts/src/`: `engine`, `states`, `cycles`, `shape`, `face`,
+`expressions`, `eyefit`, `math`, `decor`, `repere`, and the measured radial
+profiles in `profiles.ts`. The structure, the measured constants and the
+reasoning recorded in the comments come from that project; the port translates
+them to English and drops the Vue layer. `profiles.ts` is measurement data
+taken from bloub's reference footage and is copied verbatim, because it cannot
+be recomputed without the video.
+
+Its MIT copyright notice is preserved in `LICENSE` above ours.
+
+What is NOT derived from bloub
+------------------------------
+
+- `ts/src/identity.ts` — the identity look: seed, draw order, the OKLCH palette
+  and the three resting moods.
+- `ts/src/skins.ts` — the eight body silhouettes. These replace bloub's
+  customiser catalogue; they are built analytically here from the generic
+  radial-profile helpers.
+- `ts/src/status.ts` — bot status to engine state.
+- The golden set in `golden/`.
+
+Original work, MIT, same terms.
+
+Trademarks and look
+-------------------
+
+bloub recreates the avatar of x.ai's bot. Neither that avatar nor its look is
+licensed, and **this project does not use it**: no x.ai asset, palette or
+silhouette is reproduced here. The bodies in `skins.ts` are our own eight
+shapes, the palette is generated per bot from an OKLCH hue, and the resting
+moods are a subset of the expression catalogue. The resemblance that remains is
+that of an engine: a filled silhouette whose blob morphs, with two capsule eyes
+on a sphere. That is the part bloub measured and released, and it is what is
+credited above.
