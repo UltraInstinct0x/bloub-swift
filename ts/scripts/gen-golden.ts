@@ -18,6 +18,8 @@ import { mkdirSync, writeFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { avatarFor } from '../src/identity.js'
 import { engineForAvatar } from '../src/status.js'
+import { FOR_TESTS } from '../src/eyefit.js'
+import { SHAPES } from '../src/skins.js'
 import { FRAME_CASES, IDENTITY_IDS, buildCase, roundFrame, roundNumbers } from './golden-cases.js'
 
 const argDir = process.argv[2]
@@ -64,7 +66,23 @@ const frames = {
   })
 }
 
+/*
+ * The eye-offset table (eyefit.ts) as data. It is built by a bisection whose branch points are
+ * float comparisons, so a port recomputing it could land one step away; the Swift port READS this
+ * table instead, and the table is pinned here like every other number.
+ */
+const built = FOR_TESTS.build()
+const eyefit = {
+  version: 1,
+  generator: GENERATOR,
+  note: 'eyeOffset(shape, state, expression) in ball-radius units, key "<state>|<expression or empty>". Read by the Swift port as data.',
+  shapes: Object.fromEntries(
+    SHAPES.map((shape) => [shape.id, Object.fromEntries([...built.get(shape.radii)!].map(([k, v]) => [k, roundNumbers(v)]))])
+  )
+}
+
 mkdirSync(outDir, { recursive: true })
+writeJson('eyefit.json', eyefit)
 const a = writeJson('identity.json', identity)
 const b = writeJson('frames.json', frames)
 

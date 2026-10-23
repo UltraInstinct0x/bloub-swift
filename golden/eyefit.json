@@ -1,0 +1,1207 @@
+{
+  "version": 1,
+  "generator": "ts/scripts/gen-golden.ts",
+  "note": "eyeOffset(shape, state, expression) in ball-radius units, key \"<state>|<expression or empty>\". Read by the Swift port as data.",
+  "shapes": {
+    "orb": {
+      "idle|": {
+        "x": -0.004794,
+        "y": 0.008303
+      },
+      "idle|neutre": {
+        "x": -0.004794,
+        "y": 0.008303
+      },
+      "idle|attentif": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|surpris": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|excite": {
+        "x": -0.114884,
+        "y": -0.198985
+      },
+      "idle|heureux": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|hilare": {
+        "x": 0,
+        "y": 0.001367
+      },
+      "idle|colere": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|triste": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|effraye": {
+        "x": 0,
+        "y": -0.021416
+      },
+      "idle|mefiant": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|confus": {
+        "x": 0.01011,
+        "y": 0
+      },
+      "idle|curieux": {
+        "x": -0.010656,
+        "y": -0.006152
+      },
+      "idle|fier": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|timide": {
+        "x": 0.006419,
+        "y": -0.003706
+      },
+      "idle|blase": {
+        "x": 0.002282,
+        "y": 0
+      },
+      "idle|somnolent": {
+        "x": -0.105,
+        "y": -0.181865
+      },
+      "wink|": {
+        "x": 0,
+        "y": 0
+      },
+      "wide|": {
+        "x": -0.006213,
+        "y": -0.010761
+      },
+      "notify|": {
+        "x": 0.312245,
+        "y": -0.180275
+      },
+      "swirl|": {
+        "x": -0.004794,
+        "y": 0.008303
+      },
+      "swirl|neutre": {
+        "x": -0.004794,
+        "y": 0.008303
+      },
+      "swirl|attentif": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|surpris": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|excite": {
+        "x": -0.114884,
+        "y": -0.198985
+      },
+      "swirl|heureux": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|hilare": {
+        "x": 0,
+        "y": 0.001367
+      },
+      "swirl|colere": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|triste": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|effraye": {
+        "x": 0,
+        "y": -0.021416
+      },
+      "swirl|mefiant": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|confus": {
+        "x": 0.01011,
+        "y": 0
+      },
+      "swirl|curieux": {
+        "x": -0.010656,
+        "y": -0.006152
+      },
+      "swirl|fier": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|timide": {
+        "x": 0.006419,
+        "y": -0.003706
+      },
+      "swirl|blase": {
+        "x": 0.002282,
+        "y": 0
+      },
+      "swirl|somnolent": {
+        "x": -0.105,
+        "y": -0.181865
+      }
+    },
+    "lozenge": {
+      "idle|": {
+        "x": -0.006553,
+        "y": 0.01135
+      },
+      "idle|neutre": {
+        "x": -0.006553,
+        "y": 0.01135
+      },
+      "idle|attentif": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|surpris": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|excite": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|heureux": {
+        "x": -0.0525,
+        "y": 0.090933
+      },
+      "idle|hilare": {
+        "x": 0,
+        "y": 0.060156
+      },
+      "idle|colere": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|triste": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|effraye": {
+        "x": 0,
+        "y": -0.270993
+      },
+      "idle|mefiant": {
+        "x": -0.090933,
+        "y": 0.0525
+      },
+      "idle|confus": {
+        "x": 0.256182,
+        "y": 0
+      },
+      "idle|curieux": {
+        "x": -0.048545,
+        "y": -0.028027
+      },
+      "idle|fier": {
+        "x": -0.024609,
+        "y": 0.042625
+      },
+      "idle|timide": {
+        "x": 0.022502,
+        "y": -0.038975
+      },
+      "idle|blase": {
+        "x": 0.017898,
+        "y": 0
+      },
+      "idle|somnolent": {
+        "x": 0,
+        "y": 0
+      },
+      "wink|": {
+        "x": 0,
+        "y": 0
+      },
+      "wide|": {
+        "x": -0.14523,
+        "y": -0.251546
+      },
+      "notify|": {
+        "x": 0.334905,
+        "y": 0
+      },
+      "swirl|": {
+        "x": -0.006553,
+        "y": 0.01135
+      },
+      "swirl|neutre": {
+        "x": -0.006553,
+        "y": 0.01135
+      },
+      "swirl|attentif": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|surpris": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|excite": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|heureux": {
+        "x": -0.0525,
+        "y": 0.090933
+      },
+      "swirl|hilare": {
+        "x": 0,
+        "y": 0.060156
+      },
+      "swirl|colere": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|triste": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|effraye": {
+        "x": 0,
+        "y": -0.270993
+      },
+      "swirl|mefiant": {
+        "x": -0.090933,
+        "y": 0.0525
+      },
+      "swirl|confus": {
+        "x": 0.256182,
+        "y": 0
+      },
+      "swirl|curieux": {
+        "x": -0.048545,
+        "y": -0.028027
+      },
+      "swirl|fier": {
+        "x": -0.024609,
+        "y": 0.042625
+      },
+      "swirl|timide": {
+        "x": 0.022502,
+        "y": -0.038975
+      },
+      "swirl|blase": {
+        "x": 0.017898,
+        "y": 0
+      },
+      "swirl|somnolent": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    "wedge": {
+      "idle|": {
+        "x": -0.027299,
+        "y": 0.047284
+      },
+      "idle|neutre": {
+        "x": -0.027299,
+        "y": 0.047284
+      },
+      "idle|attentif": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|surpris": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|excite": {
+        "x": 0,
+        "y": -0.014672
+      },
+      "idle|heureux": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|hilare": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|colere": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|triste": {
+        "x": 0,
+        "y": -0.240706
+      },
+      "idle|effraye": {
+        "x": 0,
+        "y": -0.065377
+      },
+      "idle|mefiant": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|confus": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|curieux": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|fier": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|timide": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|blase": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|somnolent": {
+        "x": 0,
+        "y": 0
+      },
+      "wink|": {
+        "x": 0,
+        "y": 0
+      },
+      "wide|": {
+        "x": -0.055212,
+        "y": -0.095631
+      },
+      "notify|": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|": {
+        "x": -0.027299,
+        "y": 0.047284
+      },
+      "swirl|neutre": {
+        "x": -0.027299,
+        "y": 0.047284
+      },
+      "swirl|attentif": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|surpris": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|excite": {
+        "x": 0,
+        "y": -0.014672
+      },
+      "swirl|heureux": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|hilare": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|colere": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|triste": {
+        "x": 0,
+        "y": -0.240706
+      },
+      "swirl|effraye": {
+        "x": 0,
+        "y": -0.065377
+      },
+      "swirl|mefiant": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|confus": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|curieux": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|fier": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|timide": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|blase": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|somnolent": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    "trefoil": {
+      "idle|": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|neutre": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|attentif": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|surpris": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|excite": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|heureux": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|hilare": {
+        "x": -0.011621,
+        "y": 0.020128
+      },
+      "idle|colere": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|triste": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|effraye": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|mefiant": {
+        "x": -0.105,
+        "y": 0.181865
+      },
+      "idle|confus": {
+        "x": 0.062824,
+        "y": 0.036271
+      },
+      "idle|curieux": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|fier": {
+        "x": -0.030762,
+        "y": 0.053281
+      },
+      "idle|timide": {
+        "x": 0.328097,
+        "y": -0.189427
+      },
+      "idle|blase": {
+        "x": 0.033982,
+        "y": 0.019619
+      },
+      "idle|somnolent": {
+        "x": 0,
+        "y": 0
+      },
+      "wink|": {
+        "x": 0,
+        "y": 0
+      },
+      "wide|": {
+        "x": -0.154563,
+        "y": -0.26771
+      },
+      "notify|": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|neutre": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|attentif": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|surpris": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|excite": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|heureux": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|hilare": {
+        "x": -0.011621,
+        "y": 0.020128
+      },
+      "swirl|colere": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|triste": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|effraye": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|mefiant": {
+        "x": -0.105,
+        "y": 0.181865
+      },
+      "swirl|confus": {
+        "x": 0.062824,
+        "y": 0.036271
+      },
+      "swirl|curieux": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|fier": {
+        "x": -0.030762,
+        "y": 0.053281
+      },
+      "swirl|timide": {
+        "x": 0.328097,
+        "y": -0.189427
+      },
+      "swirl|blase": {
+        "x": 0.033982,
+        "y": 0.019619
+      },
+      "swirl|somnolent": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    "quatrefoil": {
+      "idle|": {
+        "x": -0.026895,
+        "y": 0.015528
+      },
+      "idle|neutre": {
+        "x": -0.026895,
+        "y": 0.015528
+      },
+      "idle|attentif": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|surpris": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|excite": {
+        "x": -0.0525,
+        "y": -0.090933
+      },
+      "idle|heureux": {
+        "x": -0.0525,
+        "y": 0.090933
+      },
+      "idle|hilare": {
+        "x": -0.021191,
+        "y": 0.036705
+      },
+      "idle|colere": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|triste": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|effraye": {
+        "x": 0,
+        "y": -0.277302
+      },
+      "idle|mefiant": {
+        "x": -0.090933,
+        "y": 0.0525
+      },
+      "idle|confus": {
+        "x": 0.254275,
+        "y": 0
+      },
+      "idle|curieux": {
+        "x": -0.056833,
+        "y": -0.032813
+      },
+      "idle|fier": {
+        "x": -0.021191,
+        "y": 0.036705
+      },
+      "idle|timide": {
+        "x": 0.028981,
+        "y": -0.050197
+      },
+      "idle|blase": {
+        "x": 0.02519,
+        "y": 0
+      },
+      "idle|somnolent": {
+        "x": -0.0525,
+        "y": -0.090933
+      },
+      "wink|": {
+        "x": 0,
+        "y": 0
+      },
+      "wide|": {
+        "x": 0,
+        "y": 0
+      },
+      "notify|": {
+        "x": 0.354463,
+        "y": 0
+      },
+      "swirl|": {
+        "x": -0.026895,
+        "y": 0.015528
+      },
+      "swirl|neutre": {
+        "x": -0.026895,
+        "y": 0.015528
+      },
+      "swirl|attentif": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|surpris": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|excite": {
+        "x": -0.0525,
+        "y": -0.090933
+      },
+      "swirl|heureux": {
+        "x": -0.0525,
+        "y": 0.090933
+      },
+      "swirl|hilare": {
+        "x": -0.021191,
+        "y": 0.036705
+      },
+      "swirl|colere": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|triste": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|effraye": {
+        "x": 0,
+        "y": -0.277302
+      },
+      "swirl|mefiant": {
+        "x": -0.090933,
+        "y": 0.0525
+      },
+      "swirl|confus": {
+        "x": 0.254275,
+        "y": 0
+      },
+      "swirl|curieux": {
+        "x": -0.056833,
+        "y": -0.032813
+      },
+      "swirl|fier": {
+        "x": -0.021191,
+        "y": 0.036705
+      },
+      "swirl|timide": {
+        "x": 0.028981,
+        "y": -0.050197
+      },
+      "swirl|blase": {
+        "x": 0.02519,
+        "y": 0
+      },
+      "swirl|somnolent": {
+        "x": -0.0525,
+        "y": -0.090933
+      }
+    },
+    "bean": {
+      "idle|": {
+        "x": -0.030955,
+        "y": 0.053615
+      },
+      "idle|neutre": {
+        "x": -0.030955,
+        "y": 0.053615
+      },
+      "idle|attentif": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|surpris": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|excite": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|heureux": {
+        "x": 0.019141,
+        "y": 0.033153
+      },
+      "idle|hilare": {
+        "x": 0,
+        "y": 0.065625
+      },
+      "idle|colere": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|triste": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|effraye": {
+        "x": -0.013583,
+        "y": -0.023527
+      },
+      "idle|mefiant": {
+        "x": -0.064258,
+        "y": 0
+      },
+      "idle|confus": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|curieux": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|fier": {
+        "x": -0.047168,
+        "y": 0.081697
+      },
+      "idle|timide": {
+        "x": 0,
+        "y": -0.048153
+      },
+      "idle|blase": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|somnolent": {
+        "x": 0,
+        "y": 0
+      },
+      "wink|": {
+        "x": 0,
+        "y": 0
+      },
+      "wide|": {
+        "x": -0.132403,
+        "y": -0.229328
+      },
+      "notify|": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|": {
+        "x": -0.030955,
+        "y": 0.053615
+      },
+      "swirl|neutre": {
+        "x": -0.030955,
+        "y": 0.053615
+      },
+      "swirl|attentif": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|surpris": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|excite": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|heureux": {
+        "x": 0.019141,
+        "y": 0.033153
+      },
+      "swirl|hilare": {
+        "x": 0,
+        "y": 0.065625
+      },
+      "swirl|colere": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|triste": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|effraye": {
+        "x": -0.013583,
+        "y": -0.023527
+      },
+      "swirl|mefiant": {
+        "x": -0.064258,
+        "y": 0
+      },
+      "swirl|confus": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|curieux": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|fier": {
+        "x": -0.047168,
+        "y": 0.081697
+      },
+      "swirl|timide": {
+        "x": 0,
+        "y": -0.048153
+      },
+      "swirl|blase": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|somnolent": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    "blob": {
+      "idle|": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|neutre": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|attentif": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|surpris": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|excite": {
+        "x": 0,
+        "y": -0.225375
+      },
+      "idle|heureux": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|hilare": {
+        "x": -0.0525,
+        "y": 0.090933
+      },
+      "idle|colere": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|triste": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|effraye": {
+        "x": 0,
+        "y": -0.30106
+      },
+      "idle|mefiant": {
+        "x": -0.075195,
+        "y": 0.130242
+      },
+      "idle|confus": {
+        "x": 0.047188,
+        "y": -0.027244
+      },
+      "idle|curieux": {
+        "x": -0.056833,
+        "y": -0.032813
+      },
+      "idle|fier": {
+        "x": -0.0525,
+        "y": 0.090933
+      },
+      "idle|timide": {
+        "x": 0.025609,
+        "y": -0.014785
+      },
+      "idle|blase": {
+        "x": 0.03845,
+        "y": 0
+      },
+      "idle|somnolent": {
+        "x": -0.105,
+        "y": -0.181865
+      },
+      "wink|": {
+        "x": 0,
+        "y": 0
+      },
+      "wide|": {
+        "x": 0,
+        "y": 0
+      },
+      "notify|": {
+        "x": 0.037607,
+        "y": -0.065138
+      },
+      "swirl|": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|neutre": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|attentif": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|surpris": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|excite": {
+        "x": 0,
+        "y": -0.225375
+      },
+      "swirl|heureux": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|hilare": {
+        "x": -0.0525,
+        "y": 0.090933
+      },
+      "swirl|colere": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|triste": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|effraye": {
+        "x": 0,
+        "y": -0.30106
+      },
+      "swirl|mefiant": {
+        "x": -0.075195,
+        "y": 0.130242
+      },
+      "swirl|confus": {
+        "x": 0.047188,
+        "y": -0.027244
+      },
+      "swirl|curieux": {
+        "x": -0.056833,
+        "y": -0.032813
+      },
+      "swirl|fier": {
+        "x": -0.0525,
+        "y": 0.090933
+      },
+      "swirl|timide": {
+        "x": 0.025609,
+        "y": -0.014785
+      },
+      "swirl|blase": {
+        "x": 0.03845,
+        "y": 0
+      },
+      "swirl|somnolent": {
+        "x": -0.105,
+        "y": -0.181865
+      }
+    },
+    "pentagon": {
+      "idle|": {
+        "x": -0.026642,
+        "y": 0.015382
+      },
+      "idle|neutre": {
+        "x": -0.026642,
+        "y": 0.015382
+      },
+      "idle|attentif": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|surpris": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|excite": {
+        "x": -0.056316,
+        "y": -0.097543
+      },
+      "idle|heureux": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|hilare": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|colere": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|triste": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|effraye": {
+        "x": 0,
+        "y": 0
+      },
+      "idle|mefiant": {
+        "x": -0.071094,
+        "y": 0.123138
+      },
+      "idle|confus": {
+        "x": 0.034044,
+        "y": 0.058967
+      },
+      "idle|curieux": {
+        "x": -0.042625,
+        "y": -0.024609
+      },
+      "idle|fier": {
+        "x": -0.0525,
+        "y": 0.090933
+      },
+      "idle|timide": {
+        "x": 0.024047,
+        "y": -0.013884
+      },
+      "idle|blase": {
+        "x": 0.038396,
+        "y": 0
+      },
+      "idle|somnolent": {
+        "x": 0,
+        "y": 0
+      },
+      "wink|": {
+        "x": 0,
+        "y": 0
+      },
+      "wide|": {
+        "x": 0,
+        "y": -0.162756
+      },
+      "notify|": {
+        "x": 0.274981,
+        "y": -0.158761
+      },
+      "swirl|": {
+        "x": -0.026642,
+        "y": 0.015382
+      },
+      "swirl|neutre": {
+        "x": -0.026642,
+        "y": 0.015382
+      },
+      "swirl|attentif": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|surpris": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|excite": {
+        "x": -0.056316,
+        "y": -0.097543
+      },
+      "swirl|heureux": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|hilare": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|colere": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|triste": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|effraye": {
+        "x": 0,
+        "y": 0
+      },
+      "swirl|mefiant": {
+        "x": -0.071094,
+        "y": 0.123138
+      },
+      "swirl|confus": {
+        "x": 0.034044,
+        "y": 0.058967
+      },
+      "swirl|curieux": {
+        "x": -0.042625,
+        "y": -0.024609
+      },
+      "swirl|fier": {
+        "x": -0.0525,
+        "y": 0.090933
+      },
+      "swirl|timide": {
+        "x": 0.024047,
+        "y": -0.013884
+      },
+      "swirl|blase": {
+        "x": 0.038396,
+        "y": 0
+      },
+      "swirl|somnolent": {
+        "x": 0,
+        "y": 0
+      }
+    }
+  }
+}
