@@ -6,7 +6,8 @@ import PackageDescription
 // engine writes, so both languages are held to one contract.
 let package = Package(
     name: "HermesAvatar",
-    platforms: [.iOS(.v17), .macOS(.v14), .watchOS(.v10)],
+    // The app repo checks this floor against Config/Base.xcconfig (tests/ios-config.test.mjs).
+    platforms: [.iOS("26.0"), .macOS("26.0")],
     products: [
         .library(name: "HermesAvatar", targets: ["HermesAvatar"]),
         .library(name: "HermesAvatarUI", targets: ["HermesAvatarUI"]),

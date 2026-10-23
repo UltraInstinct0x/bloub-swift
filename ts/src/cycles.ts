@@ -201,6 +201,7 @@ export function parseCycles(raw: string | null): Cycle[] {
   try {
     data = JSON.parse(raw)
   } catch {
+    // intentional: an unreadable cycle file means no cycles, never a crash of the avatar
     return []
   }
   if (!Array.isArray(data)) return []
