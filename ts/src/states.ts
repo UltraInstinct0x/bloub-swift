@@ -583,7 +583,7 @@ export const POSES: Record<StateId, number> = {
   egg: 0.8,
   hexagon: 0.8,
   play: 0.9,
-  orbit: 1.2,
+  orbit: 0.9,
   swirl: 0.9,
   burst: 0.45,
   comet: 1.15

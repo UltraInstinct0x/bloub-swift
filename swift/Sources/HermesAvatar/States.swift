@@ -213,7 +213,7 @@ public let STATE_BY_ID: [StateId: StateDef] = Dictionary(uniqueKeysWithValues: S
 
 public let POSES: [StateId: Double] = [
     .idle: 1, .thinking: 1.1, .wink: 0.8, .wide: 0.8, .alert: 0.75, .notify: 0.9, .exclaim: 0.8, .sleep: 0.45,
-    .egg: 0.8, .hexagon: 0.8, .play: 0.9, .orbit: 1.2, .swirl: 0.9, .burst: 0.45, .comet: 1.15,
+    .egg: 0.8, .hexagon: 0.8, .play: 0.9, .orbit: 0.9, .swirl: 0.9, .burst: 0.45, .comet: 1.15,
 ]
 
 // MARK: expressions.ts

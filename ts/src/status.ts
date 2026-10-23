@@ -18,8 +18,8 @@ import type { StateId } from './states.js'
  * | working  | thinking   | a periodic three-dot pulse, seamless as a loop, body recognised      |
  * | waiting  | wide       | the attention pose; wide eyes and no gesture that would read as done |
  * | error    | burst      | the only "something broke" state; the body collapses, then recovers  |
- * | speaking | swirl      | keeps the ROUND BODY and both eyes for the whole loop; orbit's triangle  |
- * |          |            | read as a faceless stain on the desktop (owner report, 2026-10)          |
+ * | speaking | orbit      | the only remaining continuous loop that keeps the body; its still pose is |
+ * |          |            | the ball-with-eyes beat (POSES.orbit), never the collapsing triangle     |
  * | sleeping | sleep      | the dot that bounces slowly                                           |
  *
  * Rejected candidates, and why they are not used:
@@ -65,7 +65,7 @@ export const STATUS_LOOKS: Record<BotStatus, StatusLook> = {
   working: { state: 'thinking', loop: true, fps: 30 },
   waiting: { state: 'wide', loop: false, fps: 12 },
   error: { state: 'burst', loop: false, fps: 30, revert: { to: 'idle', afterSeconds: 10 } },
-  speaking: { state: 'swirl', loop: true, fps: 30 },
+  speaking: { state: 'orbit', loop: true, fps: 30 },
   sleeping: { state: 'sleep', loop: true, fps: 4 }
 }
 

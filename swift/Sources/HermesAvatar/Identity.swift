@@ -114,7 +114,7 @@ public let STATUS_LOOKS: [BotStatus: StatusLook] = [
     .working: StatusLook(state: .thinking, loop: true, fps: 30, revertTo: nil, revertAfter: nil),
     .waiting: StatusLook(state: .wide, loop: false, fps: 12, revertTo: nil, revertAfter: nil),
     .error: StatusLook(state: .burst, loop: false, fps: 30, revertTo: .idle, revertAfter: 10),
-    .speaking: StatusLook(state: .swirl, loop: true, fps: 30, revertTo: nil, revertAfter: nil),
+    .speaking: StatusLook(state: .orbit, loop: true, fps: 30, revertTo: nil, revertAfter: nil),
     .sleeping: StatusLook(state: .sleep, loop: true, fps: 4, revertTo: nil, revertAfter: nil),
 ]
 
