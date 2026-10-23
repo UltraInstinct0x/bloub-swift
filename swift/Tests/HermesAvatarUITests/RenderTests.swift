@@ -6,6 +6,7 @@ import AppKit
 import Testing
 @testable import HermesAvatar
 @testable import HermesAvatarUI
+@testable import HermesAvatarUI
 
 @Suite struct RenderTests {
     /// The comparison is not vacuous: a frame from another date must fail against the golden one.
