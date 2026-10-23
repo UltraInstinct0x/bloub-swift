@@ -179,7 +179,7 @@ func diffFrame(_ f: BotFrame, _ g: [String: Any], _ ctx: String) -> [String] {
         #expect(stateForStatus("working") == .thinking)
         #expect(stateForStatus("waiting") == .wide)
         #expect(stateForStatus("error") == .burst)
-        #expect(stateForStatus("speaking") == .orbit)
+        #expect(stateForStatus("speaking") == .swirl)
         #expect(stateForStatus("sleeping") == .sleep)
         #expect(stateForStatus("nonsense") == .idle)
         #expect(lookForStatus("error").revertAfter == 10)
