@@ -209,8 +209,8 @@ public struct BloubView: View {
     private var still: Bool { reduceMotion || !animate }
 
     public var body: some View {
-        let fps = STATUS_LOOKS[status]!.fps
-        TimelineView(.animation(minimumInterval: 1 / fps, paused: still || scenePhase != .active)) { tl in
+        // Display rate (vsync-linked): a 1/30 s minimum lands on every other 60 Hz frame and reads as uneven.
+        TimelineView(.animation(minimumInterval: nil, paused: still || scenePhase != .active)) { tl in
             Canvas { ctx, sz in
                 let t = still ? (POSES[STATUS_LOOKS[status]!.state] ?? 1) : model.t(tl.date)
                 drawBloub(model.engine.sample(t), avatar: model.avatar, in: &ctx, side: min(sz.width, sz.height))
