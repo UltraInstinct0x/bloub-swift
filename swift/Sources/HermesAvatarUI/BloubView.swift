@@ -143,6 +143,18 @@ public func drawBloub(_ frame: BotFrame, avatar: Avatar, in ctx: inout GraphicsC
     for a in frame.arcs { stroke(a.front, a) }
 }
 
+/// The half-width the avatar is framed on (the TS `FIT_HALF`): the body fills its slot, decor that reaches
+/// past it overflows the slot instead of being cut.
+public let FIT_HALF: Double = 112
+
+extension View {
+    /// Draws a `side`-point slot from a canvas big enough for the whole viewBox, centred, not clipped.
+    func bloubSlot(_ side: CGFloat) -> some View {
+        let full = side * CGFloat(Double(HALF_VIEWBOX) / FIT_HALF)
+        return frame(width: full, height: full).frame(width: side, height: side)
+    }
+}
+
 /// One engine per view identity, so a status change morphs instead of restarting.
 @MainActor
 final class BloubModel: ObservableObject {
@@ -204,7 +216,7 @@ public struct BloubView: View {
                 drawBloub(model.engine.sample(t), avatar: model.avatar, in: &ctx, side: min(sz.width, sz.height))
             }
         }
-        .frame(width: size, height: size)
+        .bloubSlot(size)
         .accessibilityHidden(true)
         .onAppear { model.apply(status, at: Date(), still: still) }
         .onChange(of: status) { _, s in model.apply(s, at: Date(), still: still) }
@@ -225,7 +237,7 @@ public struct BloubStill: View {
         let avatar = avatarFor(profile)
         let frame = engineForAvatar(profile, status: status.rawValue).sample(POSES[state] ?? 1)
         Canvas { ctx, sz in drawBloub(frame, avatar: avatar, in: &ctx, side: min(sz.width, sz.height)) }
-            .frame(width: size, height: size)
+            .bloubSlot(size)
             .accessibilityHidden(true)
     }
 }
