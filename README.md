@@ -1,38 +1,106 @@
 # bloub-swift
 
-A morphing bot avatar for Swift and TypeScript: a filled silhouette that moves through fourteen
-measured states, with two capsule eyes painted on a sphere. Each avatar's look (body, palette,
-resting expression) is derived from an id, so every surface draws the same image from the same
-numbers.
+A living bot avatar for SwiftUI (and TypeScript): one filled shape that morphs through fourteen
+measured states, with two capsule eyes painted on a sphere. Give it an id and it gets its own body,
+colour and resting face, the same on every device.
 
-It is a port of the [bloub](https://github.com/jeremy-prt/bloub) engine by Jérémy Perret, with our
-own silhouettes and palette (see "Design rights" below).
+![Four bots: speaking, working, idle, waiting](docs/images/live.gif)
 
-`BotEngine.sample(t)` is a **pure function of time**. It has no clock, no framework and no DOM.
-Pausing, resuming, slow motion and jumping to any date all give exactly the same frame.
+It is a port of [bloub](https://github.com/jeremy-prt/bloub) by Jérémy Perret, the SVG recreation of
+the x.ai bot avatar measured frame by frame off the reference video. This repository keeps that
+engine, replaces its look with our own and adds a Swift package held to the same numbers as the
+TypeScript engine.
 
-## Swift
+- **SwiftUI view:** `BloubView(profile:status:size:)`, drawn with `Canvas` at display rate.
+- **Pure engine:** `BotEngine.sample(t)` depends only on time. Pausing, slow motion and jumping to
+  any date give exactly the same frame.
+- **Foundation-only core:** the `Bloub` module builds and tests on Linux too.
+- **One contract, two languages:** Swift reads the golden frames the TypeScript engine writes.
 
-Add the package and depend on `Bloub` (the engine, Foundation only, also builds on Linux) and,
-on Apple platforms, `BloubUI` (a SwiftUI view).
+## The fourteen states
+
+![The fourteen engine states](docs/images/states.png)
+
+Each state is a measured sequence, not a tween between key poses. `thinking` draws three typing
+dots, `sleep` is a small bouncing dot, `burst` collapses into particles and `orbit` is a body inside
+rings.
+
+## One id, one look
+
+![Eight ids, eight avatars](docs/images/identities.png)
+
+The id is hashed (FNV-1a, 32 bit) into a body (one of eight silhouettes), a palette (generated from
+an OKLCH hue) and a resting mood. No image is stored: the same id draws the same avatar on a phone,
+a widget and a web page.
+
+## Status to state
+
+![The six statuses](docs/images/statuses.png)
+
+Apps think in statuses, not animation states. `BotStatus` maps each status to a state, a loop rule
+and a frame rate:
+
+| Status | State | Loops | Frame rate |
+|---|---|---|---|
+| `idle` | `idle` (gaze drift and blinks) | yes | 4 fps |
+| `working` | `thinking` | yes | 30 fps |
+| `speaking` | `orbit` | yes | 30 fps |
+| `waiting` | `wide` | no | 12 fps |
+| `error` | `burst`, back to idle after 10 s | no | 30 fps |
+| `sleeping` | `sleep` | yes | 4 fps |
+
+## Install
+
+Swift Package Manager, iOS 26 and macOS 26:
 
 ```swift
 .package(url: "https://github.com/UltraInstinct0x/bloub-swift", branch: "main")
-// target dependencies: .product(name: "Bloub", package: "bloub-swift"),
-//                      .product(name: "BloubUI", package: "bloub-swift")
 ```
+
+```swift
+.product(name: "Bloub", package: "bloub-swift"),    // engine and identity, Foundation only
+.product(name: "BloubUI", package: "bloub-swift"),  // SwiftUI views, Apple platforms
+```
+
+The package manifest lives in `swift/`.
+
+## Use
 
 ```swift
 import BloubUI
 
+// Animated. Pauses while the scene is not active; Reduce Motion draws one still pose.
 BloubView(profile: "my-bot", status: .speaking, size: 64)
+
+// One still frame, for widgets, Live Activities and snapshots.
+BloubStill(profile: "my-bot", status: .idle, size: 34)
+
+// A PNG of any avatar, for share sheets or notifications.
+let png = bloubPNG(profile: "my-bot", status: .waiting, side: 160)
 ```
 
-The package lives in `swift/`. Its tests read `golden/`, the files the TypeScript engine writes,
-so both languages are held to one contract: `cd swift && swift test`.
+Without SwiftUI, sample the engine and draw the frame yourself:
+
+```swift
+import Bloub
+
+let engine = engineForAvatar("my-bot", status: "speaking")
+let frame = engine.sample(1.25)   // seconds; the same t always gives the same frame
+let look = avatarFor("my-bot")    // body shape, palette, resting mood
+```
+
+## Test
+
+```sh
+cd swift && swift test       # engine contract: golden frames, identity, eye fit (Linux and macOS)
+cd ts && npm ci && npm test  # the TypeScript engine and the golden generator
+```
 
 The identity seed is `fnv1a32("hermes-avatar/v1:" + id)`. The prefix keeps its original name on
 purpose: changing it would give every existing avatar a different look.
+
+The images in `docs/images` are rendered from the TypeScript engine, the same numbers the Swift port
+is tested against.
 
 ## Layout
 
