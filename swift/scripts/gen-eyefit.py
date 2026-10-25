@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Writes Sources/HermesAvatar/EyefitTable.swift from ../golden/eyefit.json (the TypeScript engine's table).
+"""Writes Sources/Bloub/EyefitTable.swift from ../golden/eyefit.json (the TypeScript engine's table).
 The golden test re-reads the JSON and checks this file still matches it."""
 import json, os
 here = os.path.dirname(os.path.abspath(__file__))
@@ -14,4 +14,4 @@ for shape, per in d['shapes'].items():
         lines.append(f'        "{k}": Point(x: {v["x"]!r}, y: {v["y"]!r}),')
     lines.append('    ],')
 lines.append(']')
-open(os.path.join(here, '..', 'Sources', 'HermesAvatar', 'EyefitTable.swift'), 'w').write('\n'.join(lines) + '\n')
+open(os.path.join(here, '..', 'Sources', 'Bloub', 'EyefitTable.swift'), 'w').write('\n'.join(lines) + '\n')

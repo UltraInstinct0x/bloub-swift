@@ -1,19 +1,38 @@
-# hermes-avatar
+# bloub-swift
 
-The live avatar of a Hermes bot: a filled silhouette that morphs through fourteen measured
-states, with two capsule eyes painted on a sphere. Every bot's look — body, palette, resting
-expression — is derived from its profile id, so the desktop, the app and the iOS Live Activity
-draw the same image from the same numbers.
+A morphing bot avatar for Swift and TypeScript: a filled silhouette that moves through fourteen
+measured states, with two capsule eyes painted on a sphere. Each avatar's look (body, palette,
+resting expression) is derived from an id, so every surface draws the same image from the same
+numbers.
 
-`BotEngine.sample(t)` is a **pure function of time**. No clock, no framework, no DOM. Pause,
-resume, slow motion and jumping to an arbitrary date all give exactly the same frame.
+It is a port of the [bloub](https://github.com/jeremy-prt/bloub) engine by Jérémy Perret, with our
+own silhouettes and palette (see "Design rights" below).
 
-## Stage
+`BotEngine.sample(t)` is a **pure function of time**. It has no clock, no framework and no DOM.
+Pausing, resuming, slow motion and jumping to any date all give exactly the same frame.
 
-This repository is **stage 1 of the design note** (`bot-avatar-bloub-design.md`): the
-TypeScript engine, the identity look, the status mapping, the cross-language golden set and CI.
-The Swift port, the Electron integration and the iOS integration are separate stages and live
-elsewhere.
+## Swift
+
+Add the package and depend on `Bloub` (the engine, Foundation only, also builds on Linux) and,
+on Apple platforms, `BloubUI` (a SwiftUI view).
+
+```swift
+.package(url: "https://github.com/UltraInstinct0x/bloub-swift", branch: "main")
+// target dependencies: .product(name: "Bloub", package: "bloub-swift"),
+//                      .product(name: "BloubUI", package: "bloub-swift")
+```
+
+```swift
+import BloubUI
+
+BloubView(profile: "my-bot", status: .speaking, size: 64)
+```
+
+The package lives in `swift/`. Its tests read `golden/`, the files the TypeScript engine writes,
+so both languages are held to one contract: `cd swift && swift test`.
+
+The identity seed is `fnv1a32("hermes-avatar/v1:" + id)`. The prefix keeps its original name on
+purpose: changing it would give every existing avatar a different look.
 
 ## Layout
 

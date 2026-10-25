@@ -1,6 +1,6 @@
 import Foundation
 import Testing
-@testable import HermesAvatar
+@testable import Bloub
 
 /// The cross-language contract: ../golden is written by the TypeScript engine (ts/scripts/gen-golden.ts) and the
 /// Swift port must reproduce it. Numbers compare at 2e-6 (the files store 1e-6); numbers inside path and matrix

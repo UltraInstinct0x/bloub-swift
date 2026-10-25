@@ -1,16 +1,16 @@
 import Foundation
-import HermesAvatar
+import Bloub
 import SwiftUI
 #if canImport(AppKit) && !targetEnvironment(macCatalyst)
 import AppKit
 #endif
 
-// SwiftUI renderer for the HermesAvatar engine: one frame -> one Canvas. The engine is clockless; the view is
+// SwiftUI renderer for the Bloub engine: one frame -> one Canvas. The engine is clockless; the view is
 // the clock (TimelineView at the status's own rate) and nothing else.
 
 /// The bot status the avatar plays (idle, working, waiting, error, speaking, sleeping), re-exported so an app can
-/// import only HermesAvatarUI and keep the engine's helper names out of its own namespace.
-public typealias BloubStatus = HermesAvatar.BotStatus
+/// import only BloubUI and keep the engine's helper names out of its own namespace.
+public typealias BloubStatus = Bloub.BotStatus
 
 /// The profile id inside a composite bot key (`gateway::profile`); the identity seed on every surface.
 public func bloubProfile(fromKey key: String) -> String {

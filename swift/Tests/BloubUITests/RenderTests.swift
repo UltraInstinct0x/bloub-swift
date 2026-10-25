@@ -4,9 +4,9 @@ import SwiftUI
 import AppKit
 #endif
 import Testing
-@testable import HermesAvatar
-@testable import HermesAvatarUI
-@testable import HermesAvatarUI
+@testable import Bloub
+@testable import BloubUI
+@testable import BloubUI
 
 @Suite struct RenderTests {
     /// The comparison is not vacuous: a frame from another date must fail against the golden one.
